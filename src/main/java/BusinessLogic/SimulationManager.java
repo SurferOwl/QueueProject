@@ -63,7 +63,7 @@
             simulationWindow.setLayout(new BorderLayout());
 
             // Create a JPanel to display simulation information
-            JPanel simulationPanel = new JPanel(new GridLayout(noQueues + 3, 1)); // +3 for current time, clients, and simulation results
+            JPanel simulationPanel = new JPanel(new GridLayout(noQueues + 3, 1));
             Color pinkColor = new Color(255, 192, 203);
             simulationPanel.setBackground(pinkColor); // Pink background color
             simulationWindow.add(simulationPanel, BorderLayout.CENTER);
@@ -108,32 +108,31 @@
             JTextField[] queueTextField = new JTextField[noQueues];
             for (int i = 0; i < noQueues; i++) {
                 queuePanels[i] = new JPanel(new GridLayout(0, 1));
-                queuePanels[i].setBackground(pinkColor); // Pink background color
+                queuePanels[i].setBackground(pinkColor);
                 queuePanels[i].setBorder(BorderFactory.createTitledBorder("Queue" + (i + 1)));
                 simulationPanel.add(queuePanels[i]);
 
                 queueTextField[i] = new JTextField();
-                queueTextField[i].setEditable(false); // Make the text field read-only
+                queueTextField[i].setEditable(false);
                 queuePanels[i].add(queueTextField[i]);
             }
 
             // Display generated clients
             JTextArea clientsTextArea = new JTextArea();
             clientsTextArea.setEditable(false);
-            clientsTextArea.setBackground(pinkColor); // Pink background color
-            clientsTextArea.setForeground(Color.BLACK); // Black text color
+            clientsTextArea.setBackground(pinkColor);
+            clientsTextArea.setForeground(Color.BLACK);
             JScrollPane clientsScrollPane = new JScrollPane(clientsTextArea);
             clientsScrollPane.setBorder(BorderFactory.createTitledBorder("Generated Clients"));
             simulationPanel.add(clientsScrollPane);
 
-            // Add generated clients to the text area
+
             for (Clients client : this.generatedClients) {
                 clientsTextArea.append(client.toString() + "\n");
             }
 
-            // Set the size of the simulation window
             simulationWindow.setSize(600, 400);
-            simulationWindow.setLocationRelativeTo(null); // Center the window
+            simulationWindow.setLocationRelativeTo(null);
             simulationWindow.setVisible(true);
 
             FileWriter fileWriter = null;
