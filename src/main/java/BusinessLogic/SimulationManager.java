@@ -62,15 +62,14 @@
             simulationWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             simulationWindow.setLayout(new BorderLayout());
 
-            // Create a JPanel to display simulation information
             JPanel simulationPanel = new JPanel(new GridLayout(noQueues + 3, 1));
             Color pinkColor = new Color(255, 192, 203);
-            simulationPanel.setBackground(pinkColor); // Pink background color
+            simulationPanel.setBackground(pinkColor);
             simulationWindow.add(simulationPanel, BorderLayout.CENTER);
 
             // Display current time
             JPanel currentTimePanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            currentTimePanel.setBackground(pinkColor); // Pink background color
+            currentTimePanel.setBackground(pinkColor); 
             JLabel currentTimeLabel = new JLabel("Current Time: ");
             JTextField currentTimeField = new JTextField(10);
             currentTimeField.setEditable(false);
@@ -78,9 +77,8 @@
             currentTimePanel.add(currentTimeField);
             simulationPanel.add(currentTimePanel);
 
-            // Display simulation results horizontally
             JPanel resultsPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-            resultsPanel.setBackground(pinkColor); // Pink background color
+            resultsPanel.setBackground(pinkColor);
 
             JLabel averageWaitingTimeLabel = new JLabel("Avg Waiting Time: ");
             JTextField averageWaitingTimeField = new JTextField(5);
@@ -142,7 +140,6 @@
                 throw new RuntimeException(e);
             }
 
-            // BufferedWriter is used to write text efficiently
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             try {
                 bufferedWriter.flush();
