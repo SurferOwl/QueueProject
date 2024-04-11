@@ -21,13 +21,12 @@ public class QueueGUI extends JFrame {
     private JTextField noClientsField;
     private JComboBox<String> strategyComboBox;
 
-    // Constructor with the same name as the class
+
     public QueueGUI() {
         setTitle("Simulation Setup");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(9, 2));
 
-        // Set pink background color for the JFrame
         getContentPane().setBackground(new Color(255, 192, 203));
 
         add(new JLabel("Time Limit:"));
@@ -91,10 +90,8 @@ public class QueueGUI extends JFrame {
                     strategy = SelectionPolicy.SHORTEST_TIME;
                 }
 
-                // Close current window
                 dispose();
 
-                // Open another window or perform simulation
                 SimulationManager simulationManager = new SimulationManager(timeLimit, maxProcessingTime, minProcessingTime, maxArrivalTime, minArrivalTime, noQueues, noClients, strategy);
 
                 simulationManager.generateNRandomTasks();
