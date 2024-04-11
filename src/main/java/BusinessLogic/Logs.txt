@@ -1,0 +1,68 @@
+Current time: 0
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Current time: 1
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Current time: 2
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Current time: 3
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Current time: 4
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Current time: 5
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Current time: 6
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Current time: 7
+Queue0: 
+Queue1: 
+Queue2: 
+Queue3: 
+Queue4: 
+Client arrived: Clients{ID=2, arrivalTime=8, serviceTime=14}
+Client arrived: Clients{ID=7, arrivalTime=8, serviceTime=18}
+Current time: 8
+Queue0: 
+Clients{ID=2, arrivalTime=8, serviceTime=14}
+Queue1: 
+Clients{ID=7, arrivalTime=8, serviceTime=18}
+Queue2: 
+Queue3: 
+Queue4: 
+Client arrived: Clients{ID=5, arrivalTime=9, serviceTime=8}
+Current time: 9
+Queue0: 
+Clients{ID=2, arrivalTime=8, serviceTime=14}
+Queue1: 
+Clients{ID=7, arrivalTime=8, serviceTime=18}
+Queue2: 
+Clients{ID=5, arrivalTime=9, serviceTime=8}
+Queue3: 
+Queue4: 
